@@ -4,7 +4,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-admin.site.site_header = "Заголовок которого нет"
+admin.site.site_header = "Тут може бути ваша реклама!"
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
