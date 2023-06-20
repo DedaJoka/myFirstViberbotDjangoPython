@@ -30,7 +30,7 @@ class City(models.Model):
     electric_parser = models.CharField(max_length=3, choices=PARSER_TYPE, default='min')
     heating_url = models.URLField("опалення", max_length=200, blank=True,)
     heating_parser = models.CharField(max_length=3, choices=PARSER_TYPE, default='min')
-    providers = models.ManyToManyField(Provider, related_name='groups', blank=True, editable=False)
+    providers = models.ManyToManyField(Provider, related_name='groups', blank=True, editable=False, verbose_name='Постачальник')
     date_check = models.DateTimeField('Дата останньої перевірки')
 
     def __str__(self):
