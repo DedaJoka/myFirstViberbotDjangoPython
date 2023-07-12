@@ -27,7 +27,8 @@ def keyboard_def (Buttons, InputFieldState):
     }
     return keyboard
 
-# Клавіатура "Головне меню"
+
+# Клавіатури
 def keyboard_start_menu(viber_id):
     buttons = []
     buttons.append(button_def(f"Комунальні тарифи", "reply", "utility_rates"))
@@ -35,8 +36,6 @@ def keyboard_start_menu(viber_id):
 
     keyboard = keyboard_def(buttons, "hidden")
     return keyboard
-
-# Клавіатура "Комунальні тарифи"
 def keyboard_utility_rates(viber_id):
     buttons = []
     city_object = City.objects.all()
